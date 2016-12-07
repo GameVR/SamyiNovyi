@@ -39,11 +39,11 @@ public class SheriffAction : MonoBehaviour {
     void Update () {
         if (inVision)
         {
-           
+        //    Sheriff.transform.LookAt(Player);
         }
         else
         {
-   
+            Sheriff.transform.rotation = Quaternion.Euler(0,0,0);
         }     
         
     }
