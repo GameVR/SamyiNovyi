@@ -81,6 +81,8 @@ ModelImporter:
     100146: mixamorig:Spine2
     100148: Shoes
     100150: Tops
+    100152: Camera
+    100154: Lamp
     400000: Body
     400002: Bottoms
     400004: Eyelashes
@@ -157,6 +159,8 @@ ModelImporter:
     400146: mixamorig:Spine2
     400148: Shoes
     400150: Tops
+    400152: Camera
+    400154: Lamp
     4300000: Body
     4300002: Eyes
     4300004: Eyelashes
@@ -185,7 +189,13 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
+    animationImportErrors: '
+
+      Imported file ''FuseModel'' conversion failed: Transform ''mixamorig:Hips''
+      for human bone ''Hips'' not found
+
+
+'
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
