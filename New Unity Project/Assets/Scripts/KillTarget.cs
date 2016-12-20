@@ -24,36 +24,36 @@ public class KillTarget : MonoBehaviour {
 	}
 	
 	void Update () {
-		Ray ray = new Ray (camera.transform.position, camera.transform.rotation * Vector3.forward);
-		RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && (hit.collider.gameObject.tag == "EnemyCowboy"))
-        {
-            target = hit.collider.gameObject;
-            if (countDown > 0.0f)
-            {
+		//Ray ray = new Ray (camera.transform.position, camera.transform.rotation * Vector3.forward);
+		//RaycastHit hit;
+      //  if (Physics.Raycast(ray, out hit) && (hit.collider.gameObject.tag == "EnemyCowboy"))
+      //  {
+     //       target = hit.collider.gameObject;
+      //      if (countDown > 0.0f)
+     //       {
                 // on target
-                countDown -= Time.deltaTime;
+     //           countDown -= Time.deltaTime;
                 //	print (countDown);
-                hitEffect.transform.position = hit.point;
-                hitEffect.enableEmission = true;
-            }
-            else
-            {
-                enemyCowboy.SetActive(false);
-                enemyRagdoll.SetActive(true);
-                Instantiate(enemyRagdoll, enemyCowboy.transform.position, enemyCowboy.transform.rotation);
-                score += 1;
-                scoreText.text = "Score: " + score;
-                countDown = timeToSelect;
+      //          hitEffect.transform.position = hit.point;
+       //         hitEffect.enableEmission = true;
+     //       }
+      //      else
+      //      {
+      //          enemyCowboy.SetActive(false);
+      //          enemyRagdoll.SetActive(true);
+      //          Instantiate(enemyRagdoll, enemyCowboy.transform.position, enemyCowboy.transform.rotation);
+     //           score += 1;
+      //          scoreText.text = "Score: " + score;
+       //         countDown = timeToSelect;
                 
-            }
-        }
-        else
-        {
+     //       }
+    //    }
+    //    else
+     //   {
             // reset
-            countDown = timeToSelect;
-            hitEffect.enableEmission = false;
-        }
+      //      countDown = timeToSelect;
+     //       hitEffect.enableEmission = false;
+     //   }
     }
 
 	void SetRandomPosition() {
