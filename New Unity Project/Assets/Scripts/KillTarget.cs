@@ -26,27 +26,6 @@ public class KillTarget : MonoBehaviour {
 	void Update () {
 		Ray ray = new Ray (camera.transform.position, camera.transform.rotation * Vector3.forward);
 		RaycastHit hit;
-		//if (Physics.Raycast (ray, out hit) && (hit.collider.gameObject.tag == "Enemy")) {
-  //          target = hit.collider.gameObject;
-  //          if (countDown > 0.0f) {
-		//		// on target
-		//		countDown -= Time.deltaTime;
-		//		//	print (countDown);
-		//		hitEffect.transform.position = hit.point;
-		//		hitEffect.enableEmission = true;
-		//	} else {
-		//		// killed
-		//		Instantiate( killEffect, target.transform.position, target.transform.rotation );
-		//		score += 1;
-  //              scoreText.text = "Score: " + score;
-		//		countDown = timeToSelect;
-		//		SetRandomPosition();
-		//	}
-		//} else {
-		//	// reset
-		//	countDown = timeToSelect;
-		//	hitEffect.enableEmission = false;
-		//}
         if (Physics.Raycast(ray, out hit) && (hit.collider.gameObject.tag == "EnemyCowboy"))
         {
             target = hit.collider.gameObject;
@@ -60,8 +39,6 @@ public class KillTarget : MonoBehaviour {
             }
             else
             {
-                // killed
-           
                 enemyCowboy.SetActive(false);
                 enemyRagdoll.SetActive(true);
                 Instantiate(enemyRagdoll, enemyCowboy.transform.position, enemyCowboy.transform.rotation);
